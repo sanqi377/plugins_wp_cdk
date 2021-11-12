@@ -6,6 +6,9 @@
 get_header();
 global $current_user;
 $user_id = $current_user->ID;
+if (!$user_id) {
+    echo '<script>alert("请登录");location.href = "/";</script>';
+}
 ?>
 
 <style>
